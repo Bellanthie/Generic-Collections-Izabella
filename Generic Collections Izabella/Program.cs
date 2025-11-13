@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Restaurant Athena = new Restaurant();
+            MenuItem GarlicBread = new MenuItem(1, "GarlicBread", 5);
+            Athena.AddToMenu(GarlicBread);
+
         }
     }
 }
