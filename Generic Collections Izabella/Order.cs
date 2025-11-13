@@ -21,6 +21,7 @@ namespace Generic_Collections_Izabella
             orderIdCounter++;
             _orderItems = orderItems;
             _tableNumber = tableNumber;
+
         }
 
     }
