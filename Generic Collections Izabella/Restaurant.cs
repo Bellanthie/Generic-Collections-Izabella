@@ -14,7 +14,7 @@ namespace Generic_Collections_Izabella
     public void AddToMenu(MenuItem menuItem)
         {
             Menu.Add(menuItem);
-
+            Console.WriteLine($"{menuItem.Name} was added to you list");
         }
 
     }
