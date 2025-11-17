@@ -24,7 +24,7 @@ namespace Generic_Collections_Izabella
 
         public override string ToString()
         {
-            return $"{Name} - {Price:C}";
+            return $"{Id} - {Name} - {Price:C}.";
         }
 
 

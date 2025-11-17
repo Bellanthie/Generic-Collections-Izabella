@@ -9,16 +9,17 @@
             Restaurant Athena = new Restaurant(); //object
 
             // Different objects of menu items
-            MenuItem GarlicBread = new MenuItem(1, "GarlicBread", 5);
+            MenuItem GarlicBread = new MenuItem(1, "GarlicBread -", 65);
             Athena.AddToMenu(GarlicBread);
 
-            MenuItem Bolognese = new MenuItem(2, "Bolognese", 15);
+            // Bolognese item object added
+            MenuItem Bolognese = new MenuItem(2, "Bolognese -", 169);
             Athena.AddToMenu(Bolognese);
 
-            MenuItem Mousaka = new MenuItem(3, "Mousaka", 30);
+            MenuItem Mousaka = new MenuItem(3, "Mousaka -", 229);
             Athena.AddToMenu(Mousaka);
 
-            MenuItem JanssonsFrestelse = new MenuItem(4, "Janssons Frestelse", 30);
+            MenuItem JanssonsFrestelse = new MenuItem(4, "Janssons Frestelse -", 229);
             Athena.AddToMenu(JanssonsFrestelse);
 
 

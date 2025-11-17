@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Generic_Collections_Izabella
-{
-    public class Order
-    {
-        // Private fields
-        static int orderIdCounter = 1;
-        private int _orderId;
-        private List<MenuItem> _orderItems;
-        private int _tableNumber;
+//namespace Generic_Collections_Izabella
+//{
+//    public class Order
+//    {
+//        // Private fields
+//        static int orderIdCounter = 1;
+//        private int _orderId;
+//        private List<MenuItem> _orderItems;
+//        private int _tableNumber;
 
-        public Order(List<MenuItem> orderItems, int tableNumber)
-        {
-            // Auto IDs
-            _orderId = orderIdCounter;
-            orderIdCounter++;
-            _orderItems = orderItems;
-            _tableNumber = tableNumber;
-        }
-
-
+//        public Order(List<MenuItem> orderItems, int tableNumber)
+//        {
+//            // Auto IDs
+//            _orderId = orderIdCounter;
+//            orderIdCounter++;
+//            _orderItems = orderItems;
+//            _tableNumber = tableNumber;
+//        }
 
 
 
-    }
-}
+
+
+//    }
+//}
