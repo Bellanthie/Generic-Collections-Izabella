@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generic_Collections_Izabella
 {
-    internal class Order
+    public class Order
     {
         // Private fields
         static int orderIdCounter = 1;
@@ -21,8 +21,11 @@ namespace Generic_Collections_Izabella
             orderIdCounter++;
             _orderItems = orderItems;
             _tableNumber = tableNumber;
-
         }
+
+
+
+
 
     }
 }

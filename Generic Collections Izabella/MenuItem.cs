@@ -21,6 +21,7 @@ namespace Generic_Collections_Izabella
             Price = price;
         }
 
+
         public override string ToString()
         {
             return $"{Name} - {Price:C}";
