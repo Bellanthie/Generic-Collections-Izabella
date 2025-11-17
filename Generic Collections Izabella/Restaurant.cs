@@ -28,9 +28,9 @@ namespace Generic_Collections_Izabella
             Console.WriteLine("-------------------------------------");
         }
 
-        public void CreateOrder()
+        public void CreateOrder(Order order)
         {
-            Console.WriteLine("Här lägger vi till ännu en beställning i kön ohc loggar detta till konsolen");
+            
 
         }
 
