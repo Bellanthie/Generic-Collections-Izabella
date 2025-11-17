@@ -24,6 +24,9 @@
 
 
             Athena.ShowMenu();
+            Console.WriteLine("---------------------------------------------------"); // i wanted to create a breakline between the menu and the orders list
+            Order order1 = new Order([GarlicBread, Bolognese, Mousaka, JanssonsFrestelse],4);
+            Order order2 = new Order([Bolognese, GarlicBread, JanssonsFrestelse, Mousaka], 22);
 
         }
     }
