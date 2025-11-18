@@ -31,7 +31,9 @@
             Order order2 = new Order([Bolognese, GarlicBread, JanssonsFrestelse], 22);
             Order order3 = new Order([Mousaka, GarlicBread], 15);
 
-
+            Athena.CreateOrder(order1);
+            Athena.CreateOrder(order2);
+            Athena.CreateOrder(order3); // all orders aren't necessary to include. i could just include order 2 and 3. We understand the overall idea
 
         }
     }

@@ -10,6 +10,7 @@ namespace Generic_Collections_Izabella
     {
         List<MenuItem> Menu = new List<MenuItem>(); //deklarerat att vi skapar en ny lista 'från' List<menutien>
         Queue<Order> OrderList = new Queue<Order>();//samma här
+        private object orderQueue;
      
         public void AddToMenu(MenuItem menuItem)
         {
@@ -22,15 +23,16 @@ namespace Generic_Collections_Izabella
             Console.WriteLine("Menu:");
             foreach(var item in Menu)
             {
-                Console.WriteLine($"{item.ToString()}"); //item.ToString - gets the method used in menuitem
+                Console.WriteLine($"{item.ToString()}"); //item.ToString - gets the method used in menuItem
             }
 
             Console.WriteLine("-------------------------------------");
         }
 
+        // Add order(s) to order list. QUEUE  function thingy
         public void CreateOrder(Order order)
         {
-            
+            OrderList.Enqueue(order);
 
         }
 

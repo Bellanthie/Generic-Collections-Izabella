@@ -9,10 +9,10 @@ namespace Generic_Collections_Izabella
     internal class MenuItem
     {
 
-        // Predefined properties for menuItem class
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        // Predefined properties/attributes for menuItem class
+        public int Id { get; set; } = 0;
+        public string Name { get; set; } = "";
+        public decimal Price { get; set; } = 0;
 
         public MenuItem(int id, string name, decimal price)
         {
