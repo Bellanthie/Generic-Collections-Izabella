@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generic_Collections_Izabella
 {
-    internal class MenuItem
+    public class MenuItem
     {
 
         // { get; set;} allows acces to both the computer and myself. The pc can look into the box and see the value GET; --

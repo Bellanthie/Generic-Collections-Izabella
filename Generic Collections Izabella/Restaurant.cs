@@ -9,9 +9,12 @@ namespace Generic_Collections_Izabella
     public class Restaurant
     {
         List<MenuItem> Menu = new List<MenuItem>(); //deklarerat att vi skapar en ny lista 'från' List<menutien>
-        Queue<Order> OrderList = new Queue<Order>();//samma här
+        public Queue<Order> OrderList = new Queue<Order>();//samma här
+        private object _orderId;
+        private object _tableNumber;
+
         //private object orderQueue;
-     
+
         public void AddToMenu(MenuItem menuItem)
         {
             Menu.Add(menuItem);
@@ -33,7 +36,7 @@ namespace Generic_Collections_Izabella
         public void CreateOrder(Order order)
         {
             OrderList.Enqueue(order);
-            Console.WriteLine($"Beställning nr {order.OrderId} ");
+            Console.WriteLine($"Beställning nr {order.PrintOrder} ");
 
         }
 
@@ -41,34 +44,47 @@ namespace Generic_Collections_Izabella
         // I don't know how to make this yet.
         // Assuming we're using if-loop somehow, in case customer wants to cancel a specific order (although in real-time
         // this is rarely done since the customer needs to be super fast. 
+        // What is the purpose of HandleORDER? I dont understand how we are supposed to Handle an order?
         public void HandleOrder()
         {
-            if (orderQueue.Count == 0)
+            if (OrderList.Count == 0)
             {
                 Console.WriteLine("Det finns inga ordrar i kön ännu.");
                 
             }
         }
 
-        public void ShowOrder()
+        public void ShowOrders()
         {
             Console.WriteLine("~~~~Här är dina beställningar~~~~");
+            Console.WriteLine($"Beställning #{_orderId} - Bord {_tableNumber}");
             // If there are no orders
+            if (OrderList.Count == 0)
+            {
+                Console.WriteLine("Det finns inga aktuella beställningar");
+                return;
+            }
+            foreach (Order order in OrderList)
+            {
+                order.PrintOrder();
+            }
         }
 
         public void ShowNextOrder()
         {
-            Console.WriteLine("skriver ut beställningen som ´är näst i kön");
+            if (OrderList.Count == 0)
+            {
+                Console.WriteLine("Inga beställningar väntar");
+                return;
+            }
+            Order next = OrderList.Peek();
+            Console.WriteLine("Nästa beställning i kön:");
+            next.PrintOrder();
         }
 
         public void ShowOrderCount()
         {
-            Console.WriteLine("skriver ut antalet beställningar i kön till konsolen");
+            Console.WriteLine($"Antal beställningar i kön: {OrderList.Count}");
         }
-
-
-
-
     }
-
 }

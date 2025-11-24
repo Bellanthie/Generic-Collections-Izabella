@@ -14,7 +14,7 @@ namespace Generic_Collections_Izabella
         private List<MenuItem> _orderItems;
         private int _tableNumber;
 
-        // Constructor below
+        // private Constructor below
         private Order(List<MenuItem> orderItems, int tableNumber)
         {
             // Prehanded Auto IDs from the given assignment
@@ -23,6 +23,29 @@ namespace Generic_Collections_Izabella
             _orderItems = orderItems;
             _tableNumber = tableNumber;
         }
+
+        public int OrderId => _orderId;
+        public IReadOnlyList<MenuItem> OrderItems => _orderItems;
+        // Public read-only properties:
+        // a variable(s) that can be accessed from outside the class, but its value can only be set once, 
+        // typically during the object's creation in its constructor
+        // So i set the data once and forEVER, and once initialized, that property cannot be changed.
+        public int TableNumber => _tableNumber;
+
+
+
+
+        // Constructor is private (LOOK DOWN)
+        // We have already created an object of Order.
+        // a 'factory method' can return an already created object.
+
+        public static Order Create(List<MenuItem> items, int tableNumber)
+        {
+            return new Order(items, tableNumber);
+        }
+
+
+
 
         //Calculating the total price
         public decimal GetTotal()
@@ -46,6 +69,11 @@ namespace Generic_Collections_Izabella
             Console.WriteLine($"Summa: {calculateTotal():0.00 kr}");
         }
 
-
+        // I haven't seen any references to below method from th assignment
+        // Therefore, guessing 
+        private object calculateTotal()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
