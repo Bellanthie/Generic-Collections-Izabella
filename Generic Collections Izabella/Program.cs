@@ -24,7 +24,7 @@
 
 
             Athena.ShowMenu();
-
+              
             Queue<Order> OrderList = new Queue<Order>(); //copied this here from the restaurant class to see what is affected
             Console.WriteLine("---------------------------------------------------"); // i wanted to create a breakline between the menu and the orders list
             Order order1 = new Order([GarlicBread, Bolognese],4);
@@ -34,6 +34,13 @@
             Athena.CreateOrder(order1);
             Athena.CreateOrder(order2);
             Athena.CreateOrder(order3); // all orders aren't necessary to include. i could just include order 2 and 3. We understand the overall idea
+            Console.ReadKey();
+
+            // Method to show real-time orders
+            Athena.ShowOrder(Order.OrderList);
+
+
+
 
         }
     }

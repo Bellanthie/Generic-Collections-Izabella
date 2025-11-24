@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Generic_Collections_Izabella
 {
-    internal class Restaurant
+    public class Restaurant
     {
         List<MenuItem> Menu = new List<MenuItem>(); //deklarerat att vi skapar en ny lista 'från' List<menutien>
         Queue<Order> OrderList = new Queue<Order>();//samma här
-        private object orderQueue;
+        //private object orderQueue;
      
         public void AddToMenu(MenuItem menuItem)
         {
             Menu.Add(menuItem);
-            Console.WriteLine($"{menuItem.Name} was added to your list");
+            Console.WriteLine($" Maträtten {menuItem.Name} har lagts till i menyn");
         }
 
         public void ShowMenu()
@@ -33,18 +33,27 @@ namespace Generic_Collections_Izabella
         public void CreateOrder(Order order)
         {
             OrderList.Enqueue(order);
+            Console.WriteLine($"Beställning nr {order.OrderId} ");
 
         }
 
 
+        // I don't know how to make this yet.
+        // Assuming we're using if-loop somehow, in case customer wants to cancel a specific order (although in real-time
+        // this is rarely done since the customer needs to be super fast. 
         public void HandleOrder()
         {
-            Console.WriteLine("Hanterar /tar bort den första beställningen i ön och loggar dtta till konsolen ");
+            if (orderQueue.Count == 0)
+            {
+                Console.WriteLine("Det finns inga ordrar i kön ännu.");
+                
+            }
         }
 
         public void ShowOrder()
         {
-            Console.WriteLine("Skriver ut alla beställningar i kön til konsolen");
+            Console.WriteLine("~~~~Här är dina beställningar~~~~");
+            // If there are no orders
         }
 
         public void ShowNextOrder()
