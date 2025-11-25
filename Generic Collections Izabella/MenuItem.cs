@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Generic_Collections_Izabella
 {
-    internal class MenuItem
+    public class MenuItem
     {
 
-        // Predefined properties for menuItem class
+        // { get; set;} allows acces to both the computer and myself. The pc can look into the box and see the value GET; --
+        // while the user is given permission to change the value of the property OR put something new into the object SET;
+        // Predefined properties/attributes for menuItem class
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
@@ -21,11 +23,10 @@ namespace Generic_Collections_Izabella
             Price = price;
         }
 
+
         public override string ToString()
         {
-            return $"{Name} - {Price:C}";
+            return $"{Id} - {Name} - {Price:C}.";
         }
-
-
     }
 }
