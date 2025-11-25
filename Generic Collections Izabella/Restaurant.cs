@@ -24,7 +24,7 @@ namespace Generic_Collections_Izabella
         public void ShowMenu()
         {
             Console.WriteLine("Menu:");
-            foreach(var item in Menu)
+            foreach (var item in Menu)
             {
                 Console.WriteLine($"{item.ToString()}"); //item.ToString - gets the method used in menuItem
             }
@@ -48,13 +48,12 @@ namespace Generic_Collections_Izabella
             if (OrderList.Count == 0)
             {
                 Console.WriteLine("Det finns inga ordrar i kön ännu.");
-                
+                return;
             }
         }
 
         public void ShowOrders()
         {
-            Console.WriteLine("~~~~Här är dina beställningar~~~~");
             Console.WriteLine($"Beställning #{_orderId} - Bord {_tableNumber}");
             // If there are no orders
             if (OrderList.Count == 0)

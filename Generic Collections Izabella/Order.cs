@@ -60,20 +60,17 @@ namespace Generic_Collections_Izabella
 
         public void PrintOrder()
         {
-            Console.WriteLine($"Order {_orderId}:");
+            Console.WriteLine($ "Order {_orderId}:");
             foreach (var item in _orderItems)
             {
                 Console.WriteLine($"1 st {item.Name} {item.Price:C} till bordsnummer {_tableNumber}");
             }
 
-            Console.WriteLine($"Summa: {calculateTotal():0.00 kr}");
+            Console.WriteLine($"Summa: {GetTotal():0.00 kr}");
         }
 
         // I haven't seen any references to below method from th assignment
         // Therefore, guessing 
-        private object calculateTotal()
-        {
-            throw new NotImplementedException();
-        }
+   
     }
 }

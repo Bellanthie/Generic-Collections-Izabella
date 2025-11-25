@@ -6,6 +6,7 @@
         {
             // Restaurant name/ object
             Console.WriteLine("Välkommen till Restaurang Athena!");
+            Console.WriteLine("");
             Restaurant Athena = new Restaurant(); //object
 
             // SHOW MENU BLOCK OF CODE
@@ -19,7 +20,6 @@
             Athena.AddToMenu(Mousaka);
             MenuItem JanssonsFrestelse = new MenuItem(4, "Janssons Frestelse -", 229);
             Athena.AddToMenu(JanssonsFrestelse);
-
             Athena.PrintLine();
 
 
