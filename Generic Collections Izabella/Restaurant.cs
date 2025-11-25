@@ -36,7 +36,7 @@ namespace Generic_Collections_Izabella
         public void CreateOrder(Order order)
         {
             OrderList.Enqueue(order);
-            Console.WriteLine($"Beställning nr {order.PrintOrder} ");
+            Console.WriteLine($"Beställning nr {order.OrderId} ");
 
         }
 
