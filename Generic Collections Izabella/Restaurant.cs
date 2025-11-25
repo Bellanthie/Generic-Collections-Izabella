@@ -86,5 +86,10 @@ namespace Generic_Collections_Izabella
         {
             Console.WriteLine($"Antal beställningar i kön: {OrderList.Count}");
         }
+
+        public void PrintLine()
+        {
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        }
     }
 }

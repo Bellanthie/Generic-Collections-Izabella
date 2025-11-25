@@ -15,7 +15,7 @@ namespace Generic_Collections_Izabella
         private int _tableNumber;
 
         // private Constructor below
-        private Order(List<MenuItem> orderItems, int tableNumber)
+        public Order(List<MenuItem> orderItems, int tableNumber)
         {
             // Prehanded Auto IDs from the given assignment
             _orderId = orderIdCounter;
