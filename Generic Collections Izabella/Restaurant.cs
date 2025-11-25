@@ -28,15 +28,13 @@ namespace Generic_Collections_Izabella
             {
                 Console.WriteLine($"{item.ToString()}"); //item.ToString - gets the method used in menuItem
             }
-
-            Console.WriteLine("-------------------------------------");
         }
 
         // Add order(s) to order list. QUEUE  function thingy
         public void CreateOrder(Order order)
         {
             OrderList.Enqueue(order);
-            Console.WriteLine($"Beställning nr {order.OrderId} ");
+            Console.WriteLine($"Beställning nr {order.OrderId} har lagts till.");
 
         }
 
