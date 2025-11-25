@@ -10,9 +10,9 @@ namespace Generic_Collections_Izabella
     {
         // Private fields
         static int orderIdCounter = 1;
-        public int _orderId;
-        public List<MenuItem> _orderItems;
-        public int _tableNumber;
+        private int _orderId;
+        private List<MenuItem> _orderItems;
+        private int _tableNumber;
 
         // private Constructor below
         public Order(List<MenuItem> orderItems, int tableNumber)
@@ -25,12 +25,13 @@ namespace Generic_Collections_Izabella
         }
 
         public int OrderId => _orderId;
-        public IReadOnlyList<MenuItem> OrderItems => _orderItems;
+        public int TableNumber => _tableNumber;
+        public List<MenuItem> OrderItems => _orderItems;
         // Public read-only properties:
         // a variable(s) that can be accessed from outside the class, but its value can only be set once, 
         // typically during the object's creation in its constructor
         // So i set the data once and forEVER, and once initialized, that property cannot be changed.
-        public int TableNumber => _tableNumber;
+        
 
 
 
@@ -60,17 +61,17 @@ namespace Generic_Collections_Izabella
 
         public void PrintOrder()
         {
-            Console.WriteLine($ "Order {_orderId}:");
+            Console.WriteLine($"Order {OrderId}:");
             foreach (var item in _orderItems)
             {
-                Console.WriteLine($"1 st {item.Name} {item.Price:C} till bordsnummer {_tableNumber}");
+                Console.WriteLine($"1 st {item.Name} {item.Price:C} till bordsnummer {TableNumber}");
             }
 
-            Console.WriteLine($"Summa: {GetTotal():0.00 kr}");
+            Console.WriteLine($"Summa: {GetTotal():0.00} kr");
+            Console.WriteLine($"Till bordnummer {TableNumber}");
+            // A blank line to separate this order from the next
+            //PrintLine(); did not want to work. ill try with an empty CW
+            Console.WriteLine();
         }
-
-        // I haven't seen any references to below method from th assignment
-        // Therefore, guessing 
-   
     }
 }

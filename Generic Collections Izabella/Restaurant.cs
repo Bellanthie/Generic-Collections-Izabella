@@ -45,11 +45,15 @@ namespace Generic_Collections_Izabella
         // What is the purpose of HandleORDER? I dont understand how we are supposed to Handle an order?
         public void HandleOrder()
         {
+            // We needed some sort of de-queue here. Now im tired..
             if (OrderList.Count == 0)
             {
                 Console.WriteLine("Det finns inga ordrar i kön ännu.");
                 return;
             }
+            Order finished = OrderList.Dequeue();
+            Console.WriteLine($"order {finished.TableNumber} är färdig");
+            Console.WriteLine();
         }
 
         public void ShowOrders()
@@ -74,9 +78,9 @@ namespace Generic_Collections_Izabella
                 Console.WriteLine("Inga beställningar väntar");
                 return;
             }
-            Order next = OrderList.Peek();
             Console.WriteLine("Nästa beställning i kön:");
-            next.PrintOrder();
+            Order nextOrder = OrderList.Peek();
+            nextOrder.PrintOrder();
         }
 
         public void ShowOrderCount()

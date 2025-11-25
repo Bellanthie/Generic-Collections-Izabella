@@ -12,9 +12,9 @@ namespace Generic_Collections_Izabella
         // { get; set;} allows acces to both the computer and myself. The pc can look into the box and see the value GET; --
         // while the user is given permission to change the value of the property OR put something new into the object SET;
         // Predefined properties/attributes for menuItem class
-        public int Id { get; set; } = 0;
-        public string Name { get; set; } = "";
-        public decimal Price { get; set; } = 0;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
 
         public MenuItem(int id, string name, decimal price)
         {
@@ -28,7 +28,5 @@ namespace Generic_Collections_Izabella
         {
             return $"{Id} - {Name} - {Price:C}.";
         }
-
-
     }
 }
