@@ -27,8 +27,8 @@
               
             Queue<Order> OrderList = new Queue<Order>(); //copied this here from the restaurant class to see what is affected
             Order order1 = new Order(new List<MenuItem> { GarlicBread, Bolognese }, 4);
-            Order order2 = new Order([Bolognese, GarlicBread, JanssonsFrestelse], 22);
-            Order order3 = new Order([Mousaka, GarlicBread], 15);
+            Order order2 = new Order(new List<MenuItem> { Bolognese, GarlicBread, JanssonsFrestelse }, 22);
+            Order order3 = new Order(new List<MenuItem> { Mousaka, GarlicBread }, 15);
 
             Athena.PrintLine();
 

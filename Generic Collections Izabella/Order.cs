@@ -10,9 +10,9 @@ namespace Generic_Collections_Izabella
     {
         // Private fields
         static int orderIdCounter = 1;
-        private int _orderId;
-        private List<MenuItem> _orderItems;
-        private int _tableNumber;
+        public int _orderId;
+        public List<MenuItem> _orderItems;
+        public int _tableNumber;
 
         // private Constructor below
         public Order(List<MenuItem> orderItems, int tableNumber)
