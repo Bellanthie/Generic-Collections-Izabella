@@ -38,16 +38,21 @@
             Athena.CreateOrder(order3); // all orders aren't necessary to include. i could just include order 2 and 3. We understand the overall idea
             Athena.PrintLine();
 
-            // Aktuella Beställningar
+            // Active Orders
             Console.WriteLine("Aktuella Ordrar");
+            Athena.ShowOrders();
 
+            // Orders in queue
+            Athena.ShowOrderCount();
 
-            // Method to show real-time orders
+            // Shows next order in queue
+            Athena.ShowNextOrder();
+
+            // Handle Order
+            Athena.HandleOrder();
+
+            Console.ReadLine();
             
-
-
-
-
         }
     }
 }
